@@ -1,0 +1,43 @@
+{
+  "catalog": {
+    "quantity": 1
+  },
+  "book": {
+    "quantity": 12,
+    "attributes": [
+      "id",
+      "class"
+    ]
+  },
+  "author": {
+    "quantity": 12,
+    "attributes": [
+      "class"
+    ]
+  },
+  "title": {
+    "quantity": 12,
+    "attributes": [
+      "class"
+    ]
+  },
+  "genre": {
+    "quantity": 12
+  },
+  "price": {
+    "quantity": 12
+  },
+  "publish_date": {
+    "quantity": 12,
+    "attributes": [
+      "id"
+    ]
+  },
+  "description": {
+    "quantity": 12,
+    "attributes": [
+      "class",
+      "id"
+    ]
+  }
+}
