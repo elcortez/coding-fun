@@ -1,4 +1,4 @@
-# this is a fibonnaci example
+# this is a modified fibonnaci example
 class Implementation
   def initialize
   end
