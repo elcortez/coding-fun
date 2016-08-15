@@ -14,3 +14,11 @@ class Rectangle
     (@width * 2) + (@height * 2)
   end
 end
+
+class Square < Rectangle
+  attr_reader :width, :height
+  def initialize(attributes = {})
+    @width = attributes[:width]
+    @height = @width
+  end
+end
