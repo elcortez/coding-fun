@@ -1,19 +1,8 @@
 def sum_pairs(array, sum)
-  if array.length <= 20
-    return iterate_over_array(array, sum)
-  else
-    slice_size = 10
-    (1..(array.length / slice_size)).each do |decompose|
-      slice = decompose * slice_size
-      slice_array = array[slice..(slice + slice_size)]
-      next if slice_array.uniq.length == 1
-
-
-      result = iterate_over_array(slice_array, sum)
-      return result if result != nil
-    end
-    return nil
-  end
+  return iterate_over_array(array, sum) if array.length <= 20
+  super_common_number = array.group_by{|i| i}.max{|x,y| x[1].length <=> y[1].length}[0]
+  return iterate_over_array(array - [super_common_number], sum)
+  return nil
 end
 
 def iterate_over_array(array, sum)
