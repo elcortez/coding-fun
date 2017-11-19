@@ -1,5 +1,6 @@
 require_relative '../bubble'
 require_relative '../roll_dice'
+require_relative '../min_factor_distance'
 
 describe 'All Specs' do
 
@@ -7,6 +8,13 @@ describe 'All Specs' do
     it 'sorts an array' do
       expect(sort_algo(["celery", "carrot", "cabbage", "tomato"]))
         .to eql(["cabbage", "carrot", "celery", "tomato"])
+    end
+  end
+
+  context 'Min Factor Distance' do
+    it 'can find min distance between factors' do
+      expect(min_distance(8)).to eql(1)
+      expect(min_distance(13013)).to eql(2)
     end
   end
 
