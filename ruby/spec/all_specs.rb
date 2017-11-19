@@ -1,7 +1,7 @@
 require_relative '../bubble'
 require_relative '../roll_dice'
 require_relative '../min_factor_distance'
-
+require_relative '../least_common_multiple'
 describe 'All Specs' do
 
   context 'Bubble' do
@@ -15,6 +15,17 @@ describe 'All Specs' do
     it 'can find min distance between factors' do
       expect(min_distance(8)).to eql(1)
       expect(min_distance(13013)).to eql(2)
+    end
+  end
+
+  context 'Least Common Multiple' do
+    it 'can return least common multiple' do
+      expect(lcm(2,5)).to eql(10)
+      expect(lcm(2,3,4)).to eql(12)
+      expect(lcm(9)).to eql(9)
+      expect(lcm(0)).to eql(0)
+      expect(lcm(0,1)).to eql(0)
+      expect(lcm(17, 20, 4, 15, 4, 18, 12, 14, 20, 19, 2, 14, 13, 7)).to eql(5290740)
     end
   end
 
