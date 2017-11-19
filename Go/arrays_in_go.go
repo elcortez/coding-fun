@@ -1,20 +1,63 @@
 package main
 
-import ("fmt")
+import (
+  "fmt"
+)
 
 func main() {
-  MySlice := []int{1, 2, 3}
-  c := cap(MySlice)
-  fmt.Println(c)
+  scores := []int{1, 2, 3, 4, 5}
+  copied := make([]int, 5)
+  copy(copied, scores[:4])
+  fmt.Println(copied)
 
-  for i := 0; i < 20; i++ {
-    MySlice = append(MySlice, i)
+  // MyString := "Hello World !!!"
+  // fmt.Println(strings.Index(MyString[11:], " "))
 
-    if cap(MySlice) != c {
-      c = cap(MySlice)
-      fmt.Println(c)
-    }
-  }
+  // AnotherIntSlice := []int{1, 2, 3, 4, 5}
+  // LastNumber := AnotherIntSlice[len(AnotherIntSlice)-1]
+  // fmt.Println(LastNumber)
+  // AllArrayButOne := AnotherIntSlice[:len(AnotherIntSlice)-1]
+  // fmt.Println(AllArrayButOne)
+  // FirstTwoNumbers := AnotherIntSlice[0:2]
+  // fmt.Println(FirstTwoNumbers)
+
+  // MyStringSlice := []string{"letho", "geralt"}
+  // MyBoolSlice := make([]bool, 10)
+  // MyIntSlice := make([]int, 0, 20)
+  // [] 0 in length, 20 in cap
+  // fmt.Printf("Slice is %d in cap and %d in length : %d \n", cap(MyIntSlice), len(MyIntSlice), MyIntSlice)
+
+  // MyIntSlice := make([]int, 20)
+  // [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] 20 in length, 20 in cap
+  // fmt.Printf("Slice is %d in cap and %d in length : %d \n", cap(MyIntSlice), len(MyIntSlice), MyIntSlice)
+  // MyIntSlice[4] = 20
+  // fmt.Println(MyIntSlice)
+
+  // MyMakeSlice := make([]int, 4)
+  // fmt.Printf("Slice is %d in cap and %d in length : %d \n", cap(MyMakeSlice), len(MyMakeSlice), MyMakeSlice)
+
+  // fmt.Printf("adding one new number... \n")
+  // MyMakeSlice = append(MyMakeSlice, 9332)
+  // fmt.Printf("Slice is %d in cap and %d in length : %d \n", cap(MyMakeSlice), len(MyMakeSlice), MyMakeSlice)
+
+  // fmt.Printf("adding one new number... \n")
+  // MyMakeSlice = append(MyMakeSlice, 676)
+  // fmt.Printf("Slice is %d in cap and %d in length : %d \n", cap(MyMakeSlice), len(MyMakeSlice), MyMakeSlice)
+
+  // MySlice := []int{1, 2, 3}
+  // c := cap(MySlice)
+  // fmt.Println(">>>>>>>>>>>")
+  // fmt.Println(c)
+
+  // for i := 0; i < 20; i++ {
+  //   MySlice = append(MySlice, i)
+
+  //   if cap(MySlice) != c {
+  //     c = cap(MySlice)
+  //     fmt.Println("----------")
+  //     fmt.Println(c)
+  //   }
+  // }
 
 
   // MyArray := [2]int{1, 2}
@@ -28,4 +71,3 @@ func main() {
   //   fmt.Println("value is %s\n", value)
   // }
 }
-
