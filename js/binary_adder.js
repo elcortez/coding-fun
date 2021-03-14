@@ -14,6 +14,8 @@ console.log(JSON.stringify(halfAdder(1,0)) === JSON.stringify([0, 1]));
 console.log(JSON.stringify(halfAdder(0,1)) === JSON.stringify([0, 1]));
 console.log(JSON.stringify(halfAdder(0,0)) === JSON.stringify([0, 0]));
 
+console.log('...........................................')
+
 const fullAdder = function(x, y, c = 0){
   let firstSum = halfAdder(x, y)
   let finalSum = halfAdder(firstSum[1], c)
@@ -33,6 +35,8 @@ console.log(JSON.stringify(fullAdder(1,0,0)) === JSON.stringify([0, 1]))
 console.log(JSON.stringify(fullAdder(0,0,1)) === JSON.stringify([0, 1]))
 console.log(JSON.stringify(fullAdder(0,1,0)) === JSON.stringify([0, 1]))
 console.log(JSON.stringify(fullAdder(0,0,0)) === JSON.stringify([0, 0]))
+
+console.log('...........................................')
 
 const AddTwoPositiveNumber = function (x, y) {
   let firstBinary = x.toString(2).split('');
